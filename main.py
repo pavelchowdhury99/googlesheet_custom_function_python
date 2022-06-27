@@ -15,5 +15,5 @@ class WKB(BaseModel):
 app = FastAPI()
 
 @app.post("/get-wkt-from-wkb")
-async def get_email(inp: WKB, request: Request):
+def get_email(inp: WKB, request: Request):
     return convert_wkb_wkt(inp.wkb_hex)

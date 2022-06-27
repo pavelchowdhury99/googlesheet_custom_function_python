@@ -1,6 +1,8 @@
 from fastapi import Request, FastAPI
 from pydantic import BaseModel
 from shapely import wkb
+import logging
+logging.basicConfig(level=logging.DEBUG)
 
 
 def convert_wkb_wkt(text: str) -> str:

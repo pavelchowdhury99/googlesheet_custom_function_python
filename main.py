@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def convert_wkb_wkt(text: str) -> str:
-    print(text)
+    logging.info(text)
     p = wkb.loads(text, hex=True)
     return str(p)
 

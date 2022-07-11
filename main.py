@@ -1,24 +1,22 @@
-from fastapi import Request, FastAPI
+from fastapi import FastAPI
 from pydantic import BaseModel
 from shapely import wkb
-import logging
-
-logging.basicConfig(level=logging.DEBUG)
 
 
-def convert_wkb_wkt(text: str) -> str:
-    logging.info(text)
-    p = wkb.loads(text, hex=True)
-    return str(p)
-
-
-class WKB(BaseModel):
+class WKB_HEX(BaseModel):
     wkb_hex: str
 
 
+def convert_wkb_wkt(text: str) -> str:
+    out = wkb.loads(text, hex=True)
+    return str(out)
+
 app = FastAPI()
 
-
-@app.post("/get-wkt-from-wkb")
-def convert(inp: WKB, request: Request):
+@app.post('/get-wkt-from-wkb')
+def get_wkt_from_wkb(inp:WKB_HEX):
     return convert_wkb_wkt(inp.wkb_hex)
+
+
+if __name__ == '__main__':
+    print(convert_wkb_wkt('010100000000b884a9329436409c878310301e5640'))

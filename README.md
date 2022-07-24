@@ -26,3 +26,6 @@ The tools will include 2 services
 - Deployment of web-app
 - Creating custom google sheet function
 - Foundation for further automation
+
+## Walkthrough
+[![Watch the video](https://img.youtube.com/vi/wh6j2vPPmDg/maxresdefault.jpg)](https://youtu.be/wh6j2vPPmDg)

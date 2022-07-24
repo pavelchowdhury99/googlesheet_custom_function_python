@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
 from fastapi.responses import RedirectResponse
+from pydantic import BaseModel
 from shapely import wkb
 
 

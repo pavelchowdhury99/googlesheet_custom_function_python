@@ -13,9 +13,14 @@ def convert_wkb_wkt(text: str) -> str:
 
 app = FastAPI()
 
-@app.post('/get-wkt-from-wkb')
+@app.post("/get-wkt-from-wkb")
 def get_wkt_from_wkb(inp:WKB_HEX):
     return convert_wkb_wkt(inp.wkb_hex)
+
+# redirecting home page to /docs
+@app.get("/", include_in_schema=False)
+async def docs_redirect():
+    return RedirectResponse(url='/docs')
 
 if __name__ == '__main__':
     print(convert_wkb_wkt('010100000000b884a9329436409c878310301e5640'))

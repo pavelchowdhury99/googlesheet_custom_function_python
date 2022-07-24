@@ -28,4 +28,4 @@ The tools will include 2 services
 - Foundation for further automation
 
 ## Walkthrough
-[![Watch the video](https://img.youtube.com/vi/wh6j2vPPmDg/maxresdefault.jpg)](https://youtu.be/wh6j2vPPmDg)
+[![Google sheet custom function using python](https://yt-embed.herokuapp.com/embed?v=wh6j2vPPmDg)](https://www.youtube.com/watch?v=wh6j2vPPmDg "Google sheet custom function using python")
